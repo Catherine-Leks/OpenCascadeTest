@@ -1,0 +1,20 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Robert",
+      "surname": "Schwartz",
+      "gender": "male",
+      "age": "43",
+      "email": "rob23@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Lucy",
+      "surname": "Ballmer",
+      "gender": "female",
+      "age": "27",
+      "email": "lucyb56@gmail.com"
+    }
+  ]
+}

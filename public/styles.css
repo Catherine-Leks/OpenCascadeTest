@@ -1,0 +1,489 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /*width: 100%;*/
+    display: flex;
+    justify-content: center;
+    background-color: #E0E0E0;
+    font-family: "Ubuntu-Light", "Tahoma", sans-serif;
+}
+
+.form {
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 15px 3px #9E9E9E; /*верт, гориз, размытие, растяж*/
+    border-radius: 4px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 30vw;
+    min-height: 57vh;
+    position: relative;
+}
+
+.form .row1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 17px 15px;
+    /*border: solid 1px red;*/
+}
+
+
+.form .head {
+    background-color: #4153AF;
+    color: #F4F3FB;
+    font-size: 22px;
+    margin: 0;
+    padding: 10px 15px 15px 15px;
+    border-radius: 4px 4px 0px 0px;
+
+}
+
+.form input {
+    /*border: solid 1px blue;*/
+    border: none;
+    border-bottom: solid 1px #BDBDBD;
+    display: flex;
+
+}
+
+.fullName {
+    /*border: solid 1px green;*/
+    font-size: 20px;
+    flex-grow: 1;
+    margin: 5px;
+
+}
+.fullName input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.fullName input[placeholder] {
+    font-size: 16px;
+}
+
+/* исчезновение placeholder при наведении */
+input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+
+
+.gender {
+    display: flex;
+    flex-wrap: wrap;
+    color: #3A3A3A;
+    flex-grow: 5;
+    margin: 5px;
+    width: 60%;
+}
+.gender p {
+    flex-grow: 1;
+    margin: 0;
+}
+
+.genderRB {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 3;
+    box-sizing: content-box;
+    flex-wrap: wrap;
+    padding: 0 10px;
+    margin: auto;
+}
+
+/* Radio */
+.radio {
+    position: relative;
+    margin: 0;
+}
+
+
+.form input[type=radio] {
+    /*display: none;*/
+}
+
+.radio_input {
+    position: absolute;
+}
+
+.radio_label {
+    padding-left: 25px;
+    color: #424242;
+}
+
+.radio_label:before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: border .1s linear;
+}
+
+.radio_label:after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background-color: deeppink;
+    border-radius: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    z-index: 2;
+    transition: opacity .1s linear;
+}
+
+.radio_input:checked + .radio_label:before {
+    border-color: deeppink;
+}
+
+.radio_input:checked + .radio_label:after {
+    opacity: 1;
+}
+
+.age {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+    width: 40%;
+}
+
+.age input {
+    width: 50%;
+    /*flex-grow: 1;*/
+    color: #424242;
+    font-size: 16px;
+
+}
+
+.age input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    display: block;
+    width: 10px;
+    background-image: url(img/arrow1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.email, .password_line  {
+    padding: 10px 5px 0 5px;
+
+}
+
+.email input[placeholder], .password_line input[placeholder]{
+    font-size: 16px;
+}
+
+
+.email input::placeholder, .password_line input::placeholder{
+    color: #424242;
+}
+
+.password {
+    padding-right: 3px;
+}
+
+.password input, .passwordConf input {
+    width: 100%;
+    box-sizing: border-box;
+}
+.passwordConf {
+    padding-left: 3px;
+}
+
+
+.lineBreak {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* ------------------ большие серые слова ------------------ */
+.bigGrey {
+    color: #757575;
+    font-size: 16px;
+}
+/* ------------------ маленькие серые слова ------------------ */
+.smallGrey {
+    font-family: "Ubuntu-Regular", "Tahoma", sans-serif;
+    font-size: 11px;
+    color: #757575;
+    padding-left: 3px;
+}
+
+/* ------------------ серые placeholder ------------------ */
+.greyPlaceholder {
+    font-size: 12px;
+}
+
+
+.foot {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #4153AF;
+    color: #F4F3FB;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 45px;
+}
+
+.btn:hover {
+    background-color: deeppink;
+}
+
+/* ------------------ Ошибки ввода ------------------ */
+.forError {
+    position: relative;
+}
+
+.error {
+    position: absolute;
+    right: 10px;
+    bottom: -8px;
+    color: deeppink;
+    font-size: 10px;
+}
+
+.errorBorder {
+    background-color: #FCE4EC;
+    border-radius: 4px;
+}
+
+
+/* ------------------ ШРИФТ ------------------ */
+
+@font-face {
+    font-family: "Ubuntu-Light";
+    src: url("fonts/Ubuntu/Ubuntu-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Ubuntu-Regular";
+    src: url("fonts/Ubuntu/Ubuntu-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* ------------------ для мини-скрин ------------------ */
+
+@media (max-width: 350px) {
+    .mini-screen {
+        flex-wrap: wrap;
+    }
+    .mini-screen .fullName input,
+    .email input,
+    .mini-screen .password input,
+    .mini-screen .passwordConf input
+    {
+        width: 80%;
+    }
+
+    .mini-screen .age {
+        justify-content: start;
+        width: 100%;
+    }
+    .mini-screen .age label {
+        width: 40%;
+    }
+
+    .mini-screen .age input {
+        width: 25%;
+    }
+
+    .mini-screen .fullName {
+        margin-bottom: 10px;
+    }
+
+    .mini-screen .password {
+        margin-bottom: 20px;
+    }
+    .mini-screen .passwordConf {
+        margin-bottom: 30px;
+    }
+    .mini-gender {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 25px;
+    }
+
+    .error {
+        left: 10px;
+    }
+
+}
+
+/* ------------------ всплывающий alert ------------------ */
+
+.alert-msg {
+
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 7px 3px #9E9E9E;
+    border-radius: 4px;
+    position: absolute;
+    left: -10px;
+    right: -10px;
+    top: -10px;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Ubuntu-Light", "Tahoma", sans-serif;
+    font-size: 16px;
+    color: #757575;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+
+.open {
+
+    bottom: -10px;
+    visibility: visible;
+}
+
+.close {
+    bottom: 100%;
+    visibility: hidden;
+}
+
+
+.alert-msg div{
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 5px 30px;
+
+}
+
+.p-title{
+    width: 30%;
+    margin: 0;
+    color: #4153AF;
+}
+
+.p-result{
+    width: 70%;
+    margin: 0;
+}
+
+.alert-msg h3 {
+    margin: 0 20px;
+    text-align: center;
+}
+.alert-msg h4{
+    margin: 0 30px;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: lighter;
+    padding: 15px;
+    border-top: dashed 1px #4153AF;
+
+ }
+
+.btn-back {
+    background-color: #4153AF;
+    color: #F4F3FB;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 0;
+    background-image: url(img/back.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.btn-bottom {
+    font-size: 14px;
+    border-radius: 4px;
+    width: 40%;
+    margin: 10px;
+    padding: 8px 0;
+}
+
+.btn-new {
+    border: solid 1px #4153AF;
+    background-color: #FFFFFF;
+    color: #4153AF;
+}
+.btn-users {
+    border: none;
+    background-color: #4153AF;
+    color: #F4F3FB;
+
+}
+
+@media (max-width: 350px) {
+    .p-title {
+        width: 100%;
+    }
+    .p-result {
+        padding-top: 10px;
+        width: 100%;
+    }
+
+    .btn-new, .btn-users {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+}
+
+.alert-users {
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 7px 3px #9E9E9E;
+    border-radius: 4px;
+    position: absolute;
+    top: 20px;
+    z-index: 6;
+    display: flex;
+    flex-direction: column;
+    font-family: "Ubuntu-Light", "Tahoma", sans-serif;
+    font-size: 16px;
+    color: #757575;
+    transition: all 0.5s;
+    align-items: center;
+    overflow: hidden;
+}
+
+.alert-users div {
+    display: flex;
+    justify-content: space-around;
+    margin: 5px;
+}
+
+.user-w {
+    width: 150px;
+}
+
+.user-table {
+    color: #4153AF;
+    border-bottom: solid 1px #757575;
+}
+

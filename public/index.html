@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<form action="" method="post" id="form" class="form">
+
+    <div class="content">
+        <p class="head">Sign Up</p>
+
+    <!-- ---------------------- ИМЯ ---------------------- -->
+    <div class="row1 mini-screen">
+    <div class="fullName">
+        <label for="name" ></label>
+        <input type="text" name="name" id ="name" placeholder="First name">
+<!--        <span class="error">Вы не ввели имя</span>-->
+    </div>
+
+    <!-- -------------------- ФАМИЛИЯ -------------------- -->
+    <div class="fullName">
+        <label for="surname"></label>
+        <input type="text" name="surname" id ="surname" placeholder="Last name">
+    </div>
+    </div>
+
+    <!-- ---------------------- ПОЛ ---------------------- -->
+    <div class="row1 mini-screen">
+
+        <div class="gender bigGrey mini-gender" id="radio" >
+
+            <p class="bigGrey">Gender</p>
+            <div class="genderRB">
+
+                <div class="radio">
+                    <input class="radio_input" name="radio" type="radio" id="male" checked>
+                    <label for="male" class="radio_label">Male</label>
+                </div>
+                <div class="radio">
+                    <input class="radio_input" name="radio" type="radio" id="female">
+                    <label for="female" class="radio_label">Female</label>
+                </div>
+            </div>
+
+        </div>
+
+    <!-- ---------------------- ВОЗРАСТ ---------------------- -->
+    <div class="age bigGrey">
+        <label for="age">Age</label>
+        <input type="number" name="age" id ="age" min="10" max="100" step="1" value="20">
+
+    </div>
+
+    </div>
+
+    <!-- ------------------ ЭЛЕКТРОННАЯ ПОЧТА ------------------ -->
+
+    <div class="row1 email lineBreak">
+        <label for="email" class="smallGrey">Email</label>
+        <input type="email" name="email" id ="email" placeholder="someone@example.com">
+    </div>
+
+
+    <!-- ---------------------- ПАРОЛЬ ---------------------- -->
+    <div class="row1 password_line mini-screen">
+
+    <div class="password lineBreak">
+        <label for="password" class="smallGrey">Password</label>
+        <input type="password" name="password" id ="password" placeholder="********">
+    </div>
+
+    <!-- ---------------------- ПОДТВЕРЖДЕНИЕ ПАРОЛЯ ---------------------- -->
+    <div class="passwordConf lineBreak">
+        <label for="passwordConf" class="smallGrey">Confirm Password</label>
+        <input type="password" name="passwordConf" id ="passwordConf" placeholder="********">
+    </div>
+    </div>
+
+    </div>
+
+    <!-- ----------------------- КНОПКА ------------------------ -->
+    <div class="foot">
+    <button type="submit" id="btn" class="btn">Sign Up</button>
+    </div>
+
+
+    <div class="alert-msg close">
+
+            <button type="submit" id="btn-back" class="btn-back"></button>
+            <h3>Congratulations! <br> You have successfully registered.</h3>
+
+            <div><p class="p-title mini-p-title">First name:</p><p class="p-result">Name</p></div>
+            <div><p class="p-title mini-p-title">Last name:</p><p class="p-result">Surname</p></div>
+            <div><p class="p-title mini-p-title">Gender:</p><p class="p-result">Male</p></div>
+            <div><p class="p-title mini-p-title">Age:</p><p class="p-result">Num</p></div>
+            <div><p class="p-title mini-p-title">Email:</p><p class="p-result">Mail</p></div>
+
+
+
+        <h4>If you want to register another account, you need to click on the button below.</h4>
+
+        <div class="mini-btn">
+            <button type="submit" id="btn-new" class="btn-bottom btn-new">Sign Up Again</button>
+            <button type="submit" id="btn-users" class="btn-bottom btn-users">Show Users</button>
+        </div>
+    </div>
+
+</form>
+
+<div class="alert-users close">
+    <div class="user-table">
+        <div class="user-w">Id</div>
+        <div class="user-w">Name</div>
+        <div class="user-w">Surname</div>
+        <div class="user-w">Male</div>
+        <div class="user-w">Age</div>
+        <div class="user-w">Email</div>
+    </div>
+
+    <button type="submit" id="btn-close" class="btn-users btn-bottom">Close</button>
+</div>
+
+<script src="signUp.js"></script>
+
+</body>
+</html>
